@@ -57,7 +57,6 @@ case $INPUT in
             set -xe
             # do something
             ;;
-            
          "$ARGUMENT_STEP_BEFORE_DATA_MIGRATION-$ARGUMENT_COMPARISON_IDENTICAL")
             set -xe
             # do something
