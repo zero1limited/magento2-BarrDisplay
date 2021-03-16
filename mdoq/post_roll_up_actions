@@ -72,10 +72,10 @@ case $INPUT in
         "$ARGUMENT_STEP_FINAL-$ARGUMENT_COMPARISON_AHEAD")
             set -xe
             # do something
-            ./mdoq/migrate.sh
             ;;
         "$ARGUMENT_STEP_FINAL-$ARGUMENT_COMPARISON_IDENTICAL")
             set -xe
+            ./mdoq/migrate.sh
             ;;
         "$ARGUMENT_STEP_FINAL-$ARGUMENT_COMPARISON_BEHIND")
             set -xe
