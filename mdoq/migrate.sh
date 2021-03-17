@@ -11,8 +11,21 @@ php bin/magento migrate:settings -r -a -vv -- ./data-migration-config.xml
 # [2021-03-17 07:40:00][WARNING]: Duplicated code in store_group.code Record id 3
 # MANUAL STEUP Recreate NGINX Manually in MDOQ, otherise MDOQ still routes to store 1
 
-php bin/magento cache:disable
 php bin/magento migrate:data -r -a -vv -- ./data-migration-config.xml
+
+php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_url https://m2.deepseateak.com/
+php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_link_url https://m2.deepseateak.com/
+php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_media_url https://m2.deepseateak.com/media/
+php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_url https://m2.deepseateak.com/
+php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_link_url hhttps://m2.deepseateak.com/
+php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_media_url https://m2.deepseateak.com/media/
+
+php bin/magento config:set --scope=websites --scope-code=new web/secure/base_url https://new.barrdisplay.com/
+php bin/magento config:set --scope=websites --scope-code=new web/secure/base_link_url https://new.barrdisplay.com/
+php bin/magento config:set --scope=websites --scope-code=new web/secure/base_media_url https://new.barrdisplay.com/media/
+php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_url https://new.barrdisplay.com/
+php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_link_url https://new.barrdisplay.com/
+php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_media_url https://new.barrdisplay.com/media/
 
 #cp app/etc/config.php.pra_dupe app/etc/config.php
 #bin/magento app:config:import
