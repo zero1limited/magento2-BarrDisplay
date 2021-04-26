@@ -69,6 +69,16 @@
         <referenceContainer name="footer">
             <referenceBlock name="report.bugs" remove="true" />
             <referenceBlock name="footer_links" remove="true" />
+            <block class="Magento\Cms\Block\Block" name="footer_links_custom">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_links_custom</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="footer_links_social">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer_links_social</argument>
+                </arguments>
+            </block>
         </referenceContainer>
         
         <move element="copyright" destination="before.body.end" before="-"/>
