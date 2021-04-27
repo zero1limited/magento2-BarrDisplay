@@ -98,19 +98,36 @@
 	padding: 5px;
 }
 /* Prices */
-.product-item .price-box {
+.product-item .price-box,
+.product-info-main .price-box {
 	margin: 10px 0;
 	display: flex;
 }
-.product-item .price-box .price-label {
+.product-info-main .price-box {
+	margin: 15px 0 0;
+}
+.product-item .price-box .price-label,
+.product-info-main .price-box .price-label {
 	display: none;
 }
-.product-item .old-price {
+.product-item .old-price,
+.product-info-main .old-price {
 	order: 1;
+	color: #aaa;
 }
-.product-item .special-price {
+.product-info-main .price-box .old-price .price-wrapper .price,
+.product-options-bottom .price-box .old-price .price-wrapper .price {
+	color: #aaa;
+	font-weight: 400;
+}
+.product-info-main .price-box .price-wrapper .price,
+.product-options-bottom .price-box .price-wrapper .price {
+	font-size: 2.6rem;
+}
+.product-item .special-price, 
+.product-info-main .special-price {
 	order: 2;
-	margin-left: 6px;
+	margin: 0 0 0 6px;
 }
 .product-item .price-box .price,
 .minimal-price-link .price-wrapper {
@@ -156,6 +173,37 @@
 .products-grid .product-item-inner {
 	display: none;
 }
+/* PDP */
+.product-info-main .product.attribute.sku {
+	font-size: 13px;
+}
+.product-info-main .action.primary.tocart {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.product-info-main .product-add-form {
+	border: 1px solid #ddd;
+	padding: 15px;
+}
+.product-info-main .box-tocart,
+.product-options-bottom .box-tocart {
+	margin-bottom: 0;
+}
+.product-info-main .box-tocart .field.qty,
+.product-options-bottom .box-tocart .field.qty {
+	display: table-cell;
+}
+.product-info-main .box-tocart .actions,
+.product-options-bottom .box-tocart .actions {
+    display: table-cell;
+    padding-top: 25px;
+    text-align: center;
+    vertical-align: bottom;
+}
+.product-social-links {
+	text-align: left;
+}
+/* eof PDP */
 /* Mobile Only */
 @media only screen and (max-width: 640px) {
 	.page-products .products-grid .product-items {
@@ -270,6 +318,7 @@
 		padding: 0;
 	}
 	.page-main {
+		padding: 25px;
 		margin-top: 20px;
 		margin-bottom: 40px;
 	}
@@ -293,6 +342,19 @@
 		z-index: 5;
 	}
 	/* eof PLP */
+	/* PDP */
+	.page-layout-1column .product.media,
+	.page-layout-1column .product-info-main {
+	    width: 48.5%;
+	}
+	.page-layout-1column .product.media {
+		border: 1px solid #ddd;
+	}
+	.product-info-main .page-title-wrapper .page-title {
+		margin: 0;
+		font-size: 30px;
+	}
+	/* eof PDP */
 	.page-footer .footer.content .links {
 		max-width: 400px;
 	}
