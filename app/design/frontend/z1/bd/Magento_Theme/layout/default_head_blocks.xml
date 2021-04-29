@@ -2,7 +2,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="apple-touch-icon" sizes="180x180" src_type="url" src="/apple-touch-icon.png"/>
+        <link rel="apple-touch-icon" sizes="180x180" src="/apple-touch-icon.png"/>
         <meta name="msapplication-TileColor" content="#9f1f1c" />
         <meta name="theme-color" content="#9f1f1c"/>
         <link rel="preconnect" src_type="url" src="https://fonts.gstatic.com"/>
