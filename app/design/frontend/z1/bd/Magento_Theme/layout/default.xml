@@ -20,10 +20,11 @@
                 </arguments>
             </block>
         </referenceContainer>
-        
-        <referenceContainer name="page.top">
-    		<block class="Magento\Framework\View\Element\Template" name="topnavtest" template="Magento_Theme::nav-test.phtml" ttl="3600" before="-"/>
-		</referenceContainer>
+		
+		<referenceBlock name="catalog.topnav">
+			<!-- add extra nav here for selected categories? -->
+			<block class="Magento\Catalog\Block\Navigation" name="highlights" template="Magento_Theme::html/topmenu-highlights.phtml"/>
+		</referenceBlock>
         
         <referenceContainer name="top.container">
         	<!-- Header KSPs -->

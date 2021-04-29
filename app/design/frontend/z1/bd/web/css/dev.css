@@ -288,6 +288,10 @@
 	.nav-sections .tel {
 		padding: 0.8rem 15px; /* matches header links */
 	}
+	.navigation .level0 > .level-top {
+		text-transform: none;
+		font-weight: 400;
+	}
 }
 /* Desktop Only */
 @media only screen and (min-width: 768px) {
@@ -295,7 +299,7 @@
 		clear: right;
 	}
 	.header.content {
-	    padding: 0 20px 10px;
+	    padding: 0 0 10px;
 	}
 	.logo {
 	    margin: 20px 0 0;
@@ -368,18 +372,111 @@
 	}
 	.minicart-wrapper .action.showcart {
 		background: #9f1f1c;
-		padding: 6px 10px 3px;
+		height: 44px;
+		padding: 0 10px;
 	}
 	.minicart-wrapper .action.showcart:before,
 	.minicart-wrapper .action.showcart.active:before,
 	.minicart-wrapper .action.showcart.active:hover:before,
 	.minicart-wrapper .action.showcart:hover:before {
 		color: #fff;
+		line-height: 44px;
 	}
 	.nav-sections {
 		background: #9f1f1c;
-		min-height: 47px;
 		margin: 0;
+	}
+	.navigation-toggle {
+		max-width: 1280px;
+		margin: 0 auto;
+	}
+	.navigation-toggle span {
+		display: inline-block;
+		background: #000;
+		color:#fff;
+		font-size: 18px;
+		font-weight: bold;
+		padding: 10px 15px;
+		cursor: pointer;
+	}
+	.navigation-toggle span:hover {
+		background: #333;
+	}
+	.navigation-toggle span:after {
+		-webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	    font-size: 42px;
+	    line-height: 20px;
+	    color: inherit;
+	    content: '\e622';
+	    font-family: 'icons-blank-theme';
+	    vertical-align: middle;
+	    display: inline-block;
+	    font-weight: normal;
+	    overflow: hidden;
+	    speak: none;
+	    text-align: center;
+	}
+	.navigation-toggle.open span:after {
+		content: '\e621';
+	}
+	.navigation-toggle + .navigation {
+		display: none;
+	}
+	/* Coer Nav amends */
+	/* We only have top level and these are displayed in a regular list which is toggled on desktop */
+	.navigation > ul {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		max-width: 300px;
+		background: #fff;
+		border 1px solid #ddd;
+		box-shadow: 0px 3px 5px rgb(0 0 0 / 15%);
+		z-index: 800;
+	}
+	.navigation .level0 {
+		display: list-item;
+		border-bottom: 1px solid #ddd;
+		margin: 0;
+	}
+	.navigation .level0 > .level-top {
+		display: block;
+	    color: #9f1f1c;
+	    font-size: 14px;
+	    font-weight: 400;
+	    padding: 0 20px;
+	    line-height: 30px;
+	}
+	.navigation .level0.active > .level-top,
+	.navigation .level0.has-active > .level-top {
+		border: 0;
+		font-weight: bold;
+		display: block;
+	}
+	.navigation .level0 > .level-top:hover {
+		background: #f4f4f4;
+	}
+	.navigation-highlights {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.navigation-highlights li {
+		display: inline-block;
+		margin: 0;
+	}
+	.navigation-highlights li a {
+		color: #fff;
+		font-size: 1.6rem;
+		font-weight: 500;
+		display: block;
+		padding: 11px 15px;
+	}
+	.navigation-highlights li a:hover {
+		text-decoration: none;
+		background: darkred;
 	}
 	.top-container {
 		max-width: 100%;
@@ -393,9 +490,20 @@
 		margin-bottom: 40px;
 	}
 	.page-main > .page-title-wrapper .page-title {
-		margin-bottom: 0;
+		margin-bottom: 15px;
 	}
 	/* PLP */
+	.catalog-category-view .page-main {
+		background: transparent;
+		padding: 0;
+	}
+	.catalog-category-view .page-main > .page-title-wrapper .page-title { 
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.category-view .category-image img {
+		width: 100%;
+	}
 	.products-grid .product-item-inner {
 		position: absolute;
 		bottom: -40px;
