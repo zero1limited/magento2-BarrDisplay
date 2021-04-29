@@ -28,14 +28,14 @@ $_menuHtml = $block->getHtml('level-top', 'submenu', $columnsLimit)
     ], function ($) {
 		$(document).ready(function() {
 	    	$('#navigation-toggle > span').click(function() {
-	    		if($(this).hasClass('open')) {
+	    		if($(this).parent().hasClass('open')) {
 	    			$(this).parent().removeClass('open');
 	    			$(this).parent().next('nav.navigation').hide();
 	    		} else {
 	    			$(this).parent().addClass('open');
 	    			$(this).parent().next('nav.navigation').show();
 	    		}
-	    	})
+	    	});
 		});
     });
 </script>

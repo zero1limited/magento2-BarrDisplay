@@ -8,7 +8,7 @@
         <link rel="preconnect" src_type="url" src="https://fonts.gstatic.com"/>
         <css src="//fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&amp;display=swap" src_type="url" />
         <css src="//fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" src_type="url" />
-        <css src="css/dev.css" media="all and (min-width: 1px)" />
+        <!--<css src="css/dev.css" media="all and (min-width: 1px)" />-->
     </head>
     <body>
         <referenceContainer name="footer-container">
