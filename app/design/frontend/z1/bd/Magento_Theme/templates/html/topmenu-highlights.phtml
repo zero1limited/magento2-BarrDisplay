@@ -1,0 +1,25 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$catId = 14;  // Root Category ID
+$subcategories = $objectManager->create('Magento\Catalog\Model\Category')->load($catId);
+$categories = $subcategories->getChildrenCategories();
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$showCat = $objectManager->get('Magento\Variable\Model\Variable')->loadByCode('category_highlights')->getPlainValue(); // list of IDs, e.g.4922,3513,3446,3464,4186,3371,3984,3343
+$showCatArr = explode(",", $showCat);
+if($showCat!=''):
+?>
+	<!-- category_highlights variable: <?= $showCat;?>-->
+	<ul class="navigation-highlights d-none d-md-inline-block" style="color:#fff">
+	    <?php
+	    foreach ($categories as $cat):
+		    $_category = $objectManager->create('Magento\Catalog\Model\Category')->load($cat->getId());
+		    $catUrl = $cat->getUrl();
+		    if (in_array($cat->getId(), $showCatArr)):
+			?>
+		        <li>
+		            <a class="link" href="<?php echo $catUrl ?>"><?php echo $cat->getName(); ?></a>
+		        </li>
+	        <?php endif; ?>
+	    <?php endforeach; ?>
+	</ul>
+<?php endif;?>

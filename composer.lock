@@ -1,10 +1,10 @@
 {
     "_readme": [
-        "This file locks the dependencies of your project to a known state.",
+        "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35c956dbb806cd0934415024847c02c9",
+    "content-hash": "ed0fb03733ddf91314ba015f276e12b9",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -20686,6 +20686,36 @@
                 "patching"
             ],
             "time": "2020-04-22T20:20:18+00:00"
+        },
+        {
+            "name": "zero1limited/sub-category-list",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zero1limited/magento2-SubCategoryList.git",
+                "reference": "77ee6eb48f79ed16cc290a33df52386e65c677ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zero1limited/magento2-SubCategoryList/zipball/77ee6eb48f79ed16cc290a33df52386e65c677ce",
+                "reference": "77ee6eb48f79ed16cc290a33df52386e65c677ce",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Zero1\\SubCategoryList\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "commercial"
+            ],
+            "description": "N/A",
+            "time": "2018-05-31T11:41:52+00:00"
         }
     ],
     "packages-dev": [
