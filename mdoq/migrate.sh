@@ -36,6 +36,10 @@ php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_m
 # Bug with Cron Jobs
 echo "USE ${m2db_database}; delete from core_config_data where path like 'crontab/jobs%';" | mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password}
 
+# Remove M1 custom email templates
+echo "USE ${m2db_database}; delete from core_config_data where path = 'customer/create_account/email_template';" | mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password}
+
+
 bin/magento config:set system/full_page_cache/caching_application 2
 bin/magento config:set catalog/search/engine elasticsearch7
 
