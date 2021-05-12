@@ -73,6 +73,12 @@ bin/magento config:set payment/sagepaysuiteserver/profile 1
 
 bin/magento config:set catalog/navigation/max_depth 2
 
+# https://zero1.teamwork.com/#/tasks/24020245 Google Analytics
+# Not required, pulling value from M1
+
+
+
+
 bin/magento cache:enable && php bin/magento cache:flush
 bin/magento deploy:mode:set production
 bin/magento indexer:reindex
