@@ -10,6 +10,10 @@
                 <value id="trustpilot" type="host">*.trustpilot.com</value>
                 <value id="googletagmanager" type="host">www.googletagmanager.com</value>
                 <value id="lpsnmedia" type="host">*.lpsnmedia.net</value>
+                <value id="bingbat" type="host">bat.bing.com</value>
+                <value id="facebook" type="host">connect.facebook.net</value>
+                <value id="google-leads" type="host">googleads.g.doubleclick.net</value>
+                <value id="pixe-tracking" type="host">rw1.marchex.io/euinc/getnumdata.js</value>
             </values>
         </policy>
 
@@ -36,6 +40,9 @@
                 <value id="ibottles" type="host">*.ibottles.co.uk</value>
                 <value id="google" type="host">*.google.com</value>
                 <value id="googleuk" type="host">*.google.co.uk</value>
+                <value id="barrdisplay" type="host">*.barrdisplay.com</value>
+                <value id="pixel-tracking" type="host">https://px.marchex.io/pixel.gif</value>
+                <value id="facebook" type="host">www.facebook.com</value>
             </values>
         </policy>
         <policy id="connect-src">

@@ -350,7 +350,7 @@ return [
                     'max_depth' => '2'
                 ],
                 'search' => [
-                    'engine' => 'elasticsuite'
+                    'elasticsearch7_server_hostname' => '12168-elastic-search'
                 ]
             ],
             'carriers' => [
