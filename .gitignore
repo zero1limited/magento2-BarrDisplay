@@ -84,5 +84,6 @@ atlassian*
 
 # MDOQ
 /mdoq
+!/mdoq/migrate.sh
 
 # Custom

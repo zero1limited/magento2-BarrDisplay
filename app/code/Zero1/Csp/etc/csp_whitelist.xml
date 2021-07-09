@@ -43,6 +43,7 @@
                 <value id="barrdisplay" type="host">*.barrdisplay.com</value>
                 <value id="pixel-tracking" type="host">https://px.marchex.io/pixel.gif</value>
                 <value id="facebook" type="host">www.facebook.com</value>
+                <value id="bingbat" type="host">bat.bing.com</value>
             </values>
         </policy>
         <policy id="connect-src">
