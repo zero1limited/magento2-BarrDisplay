@@ -9,10 +9,18 @@ echo "migration in progress" > mdoq/.migrate
 curl -X POST --data-urlencode "payload={\"channel\": \"#barrdisplay\", \"username\": \"webhookbot\", \"text\": \"Prod Instance starting Data Migration\", \"icon_emoji\": \":ghost:\"}" https://hooks.slack.com/services/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
 
 cd ~/htdocs;
-### VVV Importanto
-rm -rf var/di/* var/generation/* var/cache/* var/log/* var/page_cache/* generated/*
-php bin/magento cache:disable || true
+php bin/magento config:set -- cron/enabled 0
+sleep 10
 
+### VVV Importanto
+# get rid of pesky files
+rm -rf var/di/* var/generation/* var/cache/* var/log/* var/page_cache/* generated/* || true 
+sleep 10
+rm -rf var/di/* var/generation/* var/cache/* var/log/* var/page_cache/* generated/* || true 
+sleep 10
+rm -rf var/di/* var/generation/* var/cache/* var/log/* var/page_cache/* generated/*
+
+php bin/magento cache:disable || true
 php bin/magento maintenance:enable || true
 
 m2db_host=$(php -r '$env = include "./app/etc/env.php"; echo $env["db"]["connection"]["default"]["host"].PHP_EOL;');
@@ -107,11 +115,11 @@ bin/magento config:set admin/security/admin_account_sharing 1
 bin/magento config:set -- catalog/frontend/flat_catalog_category 0
 bin/magento config:set -- catalog/frontend/flat_catalog_product 0
 
-
 bin/magento cache:enable && php bin/magento cache:flush
 bin/magento deploy:mode:set production
 bin/magento indexer:reindex
 bin/magento maintenance:disable
+php bin/magento config:set -- cron/enabled 1
 
 curl -X POST --data-urlencode "payload={\"channel\": \"#barrdisplay\", \"username\": \"webhookbot\", \"text\": \"Prod Instance Migration Completed\", \"icon_emoji\": \":partying_face:\"}" https://hooks.slack.com/services/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
 echo "migration complete" > mdoq/.migrate
