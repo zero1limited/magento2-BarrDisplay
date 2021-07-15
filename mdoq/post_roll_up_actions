@@ -44,7 +44,10 @@ case $INPUT in
             ;;
         "$ARGUMENT_STEP_BEFORE_MAGENTO_COMMANDS-$ARGUMENT_COMPARISON_IDENTICAL")
             set -xe
-            # do something
+            if [[ ${INSTANCE_ID} -eq ${LIVE_INSTANCE_ID} ]]; then
+                # disable cron
+                php -r '$env = include("app/etc/env.php"); $env["cron"] = ["enabled" => 0]; file_put_contents("app/etc/env.php", "<?php return ".var_export($env, true).";");'
+            fi
             ;;
         "$ARGUMENT_STEP_BEFORE_MAGENTO_COMMANDS-$ARGUMENT_COMPARISON_BEHIND")
             set -xe
@@ -56,7 +59,10 @@ case $INPUT in
             ;;
         "$ARGUMENT_STEP_BEFORE_COMMON_TOOLS-$ARGUMENT_COMPARISON_IDENTICAL")
             set -xe
-            # do something
+            if [[ ${INSTANCE_ID} -eq ${LIVE_INSTANCE_ID} ]]; then
+                # enable cron
+                php -r '$env = include("app/etc/env.php"); unset($env["cron"]); file_put_contents("app/etc/env.php", "<?php return ".var_export($env, true).";");'
+            fi
             ;;
         "$ARGUMENT_STEP_BEFORE_COMMON_TOOLS-$ARGUMENT_COMPARISON_BEHIND")
             set -xe
