@@ -70,7 +70,7 @@ echo "DELETE FROM core_config_data WHERE value = 'shipperhq_shipper/carrier_ship
 echo "delete from core_config_data where path = 'customer/create_account/email_template';" | mysql ${m2db_connection_string}
 
 # https://zero1.teamwork.com/#/tasks/24635208
-echo "update eav_attribute set backend_type = 'int', source_model = 'Magento\\Eav\\Model\\Entity\\Attribute\\Source\\Boolean' where entity_type_id = 2 and attribute_code = 'address_valid';" | mysql -h ${m2db_connection_string}
+echo "update eav_attribute set backend_type = 'int', source_model = 'Magento\\\Eav\\\Model\\\Entity\\\Attribute\\\Source\\\Boolean' where entity_type_id = 2 and attribute_code = 'address_valid';" | mysql -h ${m2db_connection_string}
 echo "update core_config_data set path = 'design/head/includes_disabled' where config_id in (43, 1938);" | mysql ${m2db_connection_string}
 
 bin/magento config:set system/full_page_cache/caching_application 2
