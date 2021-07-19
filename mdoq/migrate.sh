@@ -38,6 +38,10 @@ echo "migrating data..."
 php bin/magento migrate:data -r -a -vv -- ./data-migration-config.xml
 echo "data migrated! :D"
 
+# revert installation changes to this file
+git checkout app/etc/config.php
+php bin/magento setup:upgrade -vvv
+
 php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_url https://m2.deepseateak.com/
 php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_link_url https://m2.deepseateak.com/
 php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_media_url https://m2.deepseateak.com/media/
@@ -75,6 +79,7 @@ echo "update core_config_data set path = 'design/head/includes_disabled' where c
 
 bin/magento config:set system/full_page_cache/caching_application 2
 bin/magento config:set catalog/search/engine elasticsearch7
+bin/magento config:set catalog/search/elasticsearch7_server_hostname 11157-elastic-search
 
 bin/magento config:set mdoq_connector/connector/enable 1
 bin/magento config:set mdoq_connector/connector/admin_access_enable 0
