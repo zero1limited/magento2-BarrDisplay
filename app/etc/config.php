@@ -349,9 +349,6 @@ return [
                 'navigation' => [
                     'max_depth' => '2'
                 ],
-                'search' => [
-                    'elasticsearch7_server_hostname' => '11157-elastic-search'
-                ]
             ],
             'carriers' => [
                 'shipper' => [
