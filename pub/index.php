@@ -1,5 +1,4 @@
 <?php
-file_put_contents('adam.log', '');
 /**
  * Public alias for the application entry point
  *
