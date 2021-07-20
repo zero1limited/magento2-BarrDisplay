@@ -85,29 +85,36 @@ bin/magento config:set mdoq_connector/connector/enable 1
 bin/magento config:set mdoq_connector/connector/admin_access_enable 0
 bin/magento config:set mdoq_connector/connector/url_key rt5r4zkl6kocep1iqltab5v2t5hzsejq5c7ujpjm61tsiiup9iu9e1smi7f1tu654jxzl7o7k56ptjrwcy7lhageocp5od1qjdaoaswmk01q0kefho16tsewgbj1gks3etnj83adp07mvfmncre3tmsye9srhvr7bpsyr9nyfnrcxjms45filarjq8vval332yf69m0sgmukwwzmwriu4x16n3arepi4p218p1w2hclt4soaa39ffml993d61pr
 
-bin/magento config:set smtp/configuration_option/host smtp.office365.com
-bin/magento config:set smtp/configuration_option/port 587
+bin/magento config:set trans_email/ident_general/email noreply@barrdisplay.com
+bin/magento config:set trans_email/ident_sales/email noreply@barrdisplay.com
+bin/magento config:set trans_email/ident_support/email noreply@barrdisplay.com
+bin/magento config:set trans_email/ident_custom1/email noreply@barrdisplay.com
+bin/magento config:set trans_email/ident_custom2/email noreply@barrdisplay.com
+
+bin/magento config:set free/module/email arron.moss@zero1.co.uk
+bin/magento config:set free/module/create 1
+bin/magento config:set free/module/subscribe 1
+
+bin/magento config:set smtp/configuration_option/port 25
 bin/magento config:set smtp/configuration_option/protocol tls
 bin/magento config:set smtp/configuration_option/authentication login
-bin/magento config:set smtp/configuration_option/username regalia@regalia.co.uk
-bin/magento config:set smtp/configuration_option/password Rov45918
-bin/magento config:set smtp/configuration_option/return_path_email regalia@regalia.co.uk
-bin/magento config:set smtp/configuration_option/test_email/from general
-bin/magento config:set smtp/configuration_option/test_email/to arron.moss@zero1.co.uk
+bin/magento config:set smtp/configuration_option/username noreply@barrdisplay.com
+bin/magento config:set smtp/configuration_option/return_path_email sales@barrdisplay.com
+bin/magento config:set smtp/module/active 1
+bin/magento config:set smtp/module/product_key NNOWT7K8WQXELA8FJCU18RV15TCX90R41NCZWT0C
+bin/magento config:set smtp/module/email arron.moss@zero1.co.uk
+bin/magento config:set smtp/module/name 'Julia Prestia'
+bin/magento config:set smtp/module/create 1
+bin/magento config:set smtp/module/subscribe 1
+bin/magento config:set smtp/general/enabled 1
+
 bin/magento config:set twofactorauth/general/enable 0
+
 
 bin/magento config:set cataloginventory/item_options/min_sale_qty 1
 bin/magento config:set cataloginventory/item_options/min_qty 1
 
-# SagePay
-bin/magento config:set sagepaysuite/global/license 3591ef553378144337418126a9be8fb341cfe7b5
-bin/magento config:set sagepaysuite/global/vendorname epicreg
-bin/magento config:set sagepaysuite/global/mode live
-bin/magento config:set sagepaysuite/global/protocol 3.00
-bin/magento config:set payment/sagepaysuiteserver/active 1
-bin/magento config:set payment/sagepaysuiteserver/payment_action PAYMENT
-bin/magento config:set payment/sagepaysuiteserver/title 'Credit / Debit Card'
-bin/magento config:set payment/sagepaysuiteserver/profile 1
+
 
 # https://zero1.teamwork.com/#/tasks/24020245 Google Analytics
 # Not required, pulling value from M1
