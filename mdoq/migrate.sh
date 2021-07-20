@@ -121,10 +121,20 @@ bin/magento config:set -- catalog/frontend/flat_catalog_product 0
 # https://zero1.teamwork.com/#/tasks/24635208
 php bin/magento config:set sales/totals_sort/loworderfee 35
 
+# SQL import
+search_dir="./mdoq/sql"
+
+for entry in `ls $search_dir`; do
+    mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password} ${m2db_database} < ./mdoq/sql/$entry
+done
+
+
 bin/magento cache:enable && php bin/magento cache:flush
 bin/magento deploy:mode:set production
 bin/magento indexer:reindex
 bin/magento maintenance:disable
+
+
 
 curl -X POST --data-urlencode "payload={\"channel\": \"#barrdisplay\", \"username\": \"webhookbot\", \"text\": \"Prod Instance Migration Completed\", \"icon_emoji\": \":partying_face:\"}" https://hooks.slack.com/services/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
 echo "migration complete" > mdoq/.migrate
