@@ -109,8 +109,6 @@ bin/magento config:set payment/sagepaysuiteserver/payment_action PAYMENT
 bin/magento config:set payment/sagepaysuiteserver/title 'Credit / Debit Card'
 bin/magento config:set payment/sagepaysuiteserver/profile 1
 
-bin/magento config:set catalog/navigation/max_depth 2
-
 # https://zero1.teamwork.com/#/tasks/24020245 Google Analytics
 # Not required, pulling value from M1
 
