@@ -91,9 +91,9 @@ bin/magento config:set trans_email/ident_support/email noreply@barrdisplay.com
 bin/magento config:set trans_email/ident_custom1/email noreply@barrdisplay.com
 bin/magento config:set trans_email/ident_custom2/email noreply@barrdisplay.com
 
-bin/magento config:set free/module/email arron.moss@zero1.co.uk
-bin/magento config:set free/module/create 1
-bin/magento config:set free/module/subscribe 1
+#bin/magento config:set free/module/email arron.moss@zero1.co.uk
+#bin/magento config:set free/module/create 1
+#bin/magento config:set free/module/subscribe 1
 
 bin/magento config:set smtp/configuration_option/port 25
 bin/magento config:set smtp/configuration_option/protocol tls
@@ -102,12 +102,12 @@ bin/magento config:set smtp/configuration_option/username noreply@barrdisplay.co
 bin/magento config:set smtp/configuration_option/return_path_email sales@barrdisplay.com
 bin/magento config:set smtp/configuration_option/password 'JPbarr2016!'
 
-bin/magento config:set smtp/module/active 1
+#bin/magento config:set smtp/module/active 1
 bin/magento config:set smtp/module/product_key NNOWT7K8WQXELA8FJCU18RV15TCX90R41NCZWT0C
 bin/magento config:set smtp/module/email arron.moss@zero1.co.uk
 bin/magento config:set smtp/module/name 'Julia Prestia'
-bin/magento config:set smtp/module/create 1
-bin/magento config:set smtp/module/subscribe 1
+#bin/magento config:set smtp/module/create 1
+#bin/magento config:set smtp/module/subscribe 1
 bin/magento config:set smtp/general/enabled 1
 
 bin/magento config:set twofactorauth/general/enable 0
