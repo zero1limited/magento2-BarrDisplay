@@ -130,8 +130,9 @@ bin/magento config:set -- catalog/frontend/flat_catalog_product 0
 # https://zero1.teamwork.com/#/tasks/24635208
 php bin/magento config:set sales/totals_sort/loworderfee 35
 
-# https://zero1.teamwork.com/#/tasks/24020248 
-php bin/magento config:set carriers/instore/active 1
+# https://zero1.teamwork.com/#/tasks/24020248  - THROWS EXCEPTION 
+# Unable to serialize value. Error: Malformed UTF-8 characters, possibly incorrectly encoded
+# php bin/magento config:set carriers/instore/active 1
 
 # SQL import
 search_dir="./mdoq/sql"
