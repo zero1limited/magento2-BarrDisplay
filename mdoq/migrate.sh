@@ -141,12 +141,14 @@ for entry in `ls $search_dir`; do
     mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password} ${m2db_database} < ./mdoq/sql/$entry
 done
 
-
 bin/magento cache:enable && php bin/magento cache:flush
+
+bin/magento maintenance:enable
+rm -Rf ~/htdocs/generated
+bin/magento cache:flush
 bin/magento deploy:mode:set production
 bin/magento indexer:reindex
 bin/magento maintenance:disable
-
 
 
 curl -X POST --data-urlencode "payload={\"channel\": \"#barrdisplay\", \"username\": \"webhookbot\", \"text\": \"Prod Instance Migration Completed\", \"icon_emoji\": \":partying_face:\"}" https://hooks.slack.com/services/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
