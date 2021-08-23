@@ -121,6 +121,10 @@ echo "USE ${m2db_database}; update cms_page set identifier = 'customer-service-o
 echo "USE ${m2db_database}; update cms_page set identifier = 'location-directions-old' where identifier = 'location-directions'; update cms_page set identifier = 'location-directions' where identifier = 'location-directions_m2'; | mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password} ${m2db_database};"
 echo "USE ${m2db_database}; update cms_block set identifier = 'footer_links_custom_old' where identifier = 'footer_links_custom'; update cms_page set identifier = 'footer_links_custom' where identifier = 'footer_links_custom_m2'; | mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password} ${m2db_database};"
 
+# Change title of click and collect
+bin/magento config:set carriers/instore/name 'Pick Up Locations'
+bin/magento config:set carriers/instore/title 'Pick Up My Order'
+
 # https://zero1.teamwork.com/#/tasks/24020245 Google Analytics
 # Not required, pulling value from M1
 
