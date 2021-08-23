@@ -110,7 +110,7 @@ bin/magento config:set smtp/module/name 'Julia Prestia'
 #bin/magento config:set smtp/module/subscribe 1
 bin/magento config:set smtp/general/enabled 1
 
-/* Set new homepage */
+# /* Set new homepage */
 bin/magento config:set web/default/cms_home_page home_m2
 
 
@@ -119,7 +119,7 @@ bin/magento config:set twofactorauth/general/enable 0
 bin/magento config:set cataloginventory/item_options/min_sale_qty 1
 bin/magento config:set cataloginventory/item_options/min_qty 1
 
-/* Content Changes */
+# /* Content Changes */
 bin/magento config:set web/default/cms_home_page home_m2
 echo "USE ${m2db_database}; update cms_page set identifier = 'customer-service-old' where identifier = 'customer-service'; update cms_page set identifier = 'customer-service' where identifier = 'customer-service_m2'; | mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password} ${m2db_database};"
 echo "USE ${m2db_database}; update cms_page set identifier = 'location-directions-old' where identifier = 'location-directions'; update cms_page set identifier = 'location-directions' where identifier = 'location-directions_m2'; | mysql -h ${m2db_host} -u ${m2db_user} -p${m2db_password} ${m2db_database};"
