@@ -42,19 +42,26 @@ echo "data migrated! :D"
 git checkout app/etc/config.php
 php bin/magento setup:upgrade -vvv
 
-php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_url https://m2.deepseateak.com/
-php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_link_url https://m2.deepseateak.com/
-php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_media_url https://m2.deepseateak.com/media/
-php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_url https://m2.deepseateak.com/
-php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_link_url https://m2.deepseateak.com/
-php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_media_url https://m2.deepseateak.com/media/
+#php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_url https://m2.deepseateak.com/
+#php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_link_url https://m2.deepseateak.com/
+#php bin/magento config:set --scope=websites --scope-code=deepseateak web/unsecure/base_media_url https://m2.deepseateak.com/media/
+#php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_url https://m2.deepseateak.com/
+#php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_link_url https://m2.deepseateak.com/
+#php bin/magento config:set --scope=websites --scope-code=deepseateak web/secure/base_media_url https://m2.deepseateak.com/media/
 
-php bin/magento config:set --scope=websites --scope-code=new web/secure/base_url https://new.barrdisplay.com/
-php bin/magento config:set --scope=websites --scope-code=new web/secure/base_link_url https://new.barrdisplay.com/
-php bin/magento config:set --scope=websites --scope-code=new web/secure/base_media_url https://new.barrdisplay.com/media/
-php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_url https://new.barrdisplay.com/
-php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_link_url https://new.barrdisplay.com/
-php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_media_url https://new.barrdisplay.com/media/
+#php bin/magento config:set --scope=websites --scope-code=new web/secure/base_url https://new.barrdisplay.com/
+#php bin/magento config:set --scope=websites --scope-code=new web/secure/base_link_url https://new.barrdisplay.com/
+#php bin/magento config:set --scope=websites --scope-code=new web/secure/base_media_url https://new.barrdisplay.com/media/
+#php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_url https://new.barrdisplay.com/
+#php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_link_url https://new.barrdisplay.com/
+#php bin/magento config:set --scope=websites --scope-code=new web/unsecure/base_media_url https://new.barrdisplay.com/media/
+
+bin/magento config:set --scope=websites --scope-code=base web/secure/base_url https://barr-display.mdoq.io/
+bin/magento config:set --scope=websites --scope-code=base web/secure/base_link_url https://barr-display.mdoq.io/
+bin/magento config:set --scope=websites --scope-code=base web/secure/base_media_url https://barr-display.mdoq.io/media/
+bin/magento config:set --scope=websites --scope-code=base web/unsecure/base_url https://barr-display.mdoq.io/
+bin/magento config:set --scope=websites --scope-code=base web/unsecure/base_link_url https://barr-display.mdoq.io/
+bin/magento config:set --scope=websites --scope-code=base web/unsecure/base_media_url https://barr-display.mdoq.io/media/
 
 #cp app/etc/config.php.pra_dupe app/etc/config.php
 #bin/magento app:config:import
@@ -172,6 +179,6 @@ bin/magento config:set -- carriers/shipper/password '3e50ae67a90d1989891ee0b47d2
 
 # Change title of click and collect
 # These seem to fail all the time for some reason, moving to the end.
-bin/magento config:set -- carriers/instore/active 1
-bin/magento config:set -- carriers/instore/name 'Pick Up Locations'
-bin/magento config:set -- carriers/instore/title 'Pick Up My Order'
+#bin/magento config:set -- carriers/instore/active 1
+#bin/magento config:set -- carriers/instore/name 'Pick Up Locations'
+#bin/magento config:set -- carriers/instore/title 'Pick Up My Order'
