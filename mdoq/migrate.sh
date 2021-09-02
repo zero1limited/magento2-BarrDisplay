@@ -71,6 +71,9 @@ bin/magento config:set --scope=websites --scope-code=base web/unsecure/base_medi
 # Set theme
 echo "insert into core_config_data (scope, scope_id, path, value) values ('default', 0, 'design/theme/theme_id', (select theme_id from theme where code = 'z1/bd'));" | mysql ${m2db_connection_string}
 
+# default store
+#echo "USE ${m2db_database}; UPDATE store SET code = 'default' WHERE store_id = 4;" | mysql ${m2db_connection_string}
+
 # Bug with Cron Jobs
 echo "delete from core_config_data where path like 'crontab/jobs%';" | mysql ${m2db_connection_string}
 
