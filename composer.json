@@ -26,6 +26,7 @@
         "shipperhq/module-option": "^20.5",
         "shipperhq/module-shipper": "^20.40",
         "taxjar/module-taxjar": "^1.6",
+        "wyomind/elasticsearchcore": "^5.0",
         "wyomind/quickorder": "^1.5",
         "zero1/module-sub-category-listing": "^1.0",
         "zero1limited/magento2-patches": "^1.0"
