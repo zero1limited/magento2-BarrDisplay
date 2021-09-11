@@ -176,12 +176,12 @@ curl -X POST --data-urlencode "payload={\"channel\": \"#barrdisplay\", \"usernam
 echo "migration complete" > mdoq/.migrate
 
 # without configuring these, instore commands fail.
-bin/magento config:set -- carriers/shipper/api_key 'dcbf6f094ad3ae0b8bfa865d72ecd244'
-bin/magento config:set -- carriers/shipper/password '3e50ae67a90d1989891ee0b47d295b401fc3695e2f46a5221a'
+bin/magento config:set -- carriers/shipper/api_key '0:3:dnZaL6CplxL7CpA75hw0T5LNwWSYR/VzDUpQrlkoehTuCyK18nuJAw/lTKkEm9YSVA5m10a4GpxQ8zqI'
+bin/magento config:set -- carriers/shipper/password '0:3:Y7PvwaEfgNvtDjP7isFNbXjrk9VtA83RmYmg4ecnKH3mInXy1bmdQKq6GgOfnwR9RZ3KLGLfZxdkjpLUK3aFQAiQhS04F8obDALFHF7C'
 
 
 # Change title of click and collect
 # These seem to fail all the time for some reason, moving to the end.
-#bin/magento config:set -- carriers/instore/active 1
-#bin/magento config:set -- carriers/instore/name 'Pick Up Locations'
-#bin/magento config:set -- carriers/instore/title 'Pick Up My Order'
+bin/magento config:set -- carriers/instore/active 1
+bin/magento config:set -- carriers/instore/name 'Pick Up Locations'
+bin/magento config:set -- carriers/instore/title 'Pick Up My Order'
