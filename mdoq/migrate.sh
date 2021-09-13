@@ -176,8 +176,8 @@ curl -X POST --data-urlencode "payload={\"channel\": \"#barrdisplay\", \"usernam
 echo "migration complete" > mdoq/.migrate
 
 # without configuring these, instore commands fail.
-bin/magento config:set -- carriers/shipper/api_key '0:3:dnZaL6CplxL7CpA75hw0T5LNwWSYR/VzDUpQrlkoehTuCyK18nuJAw/lTKkEm9YSVA5m10a4GpxQ8zqI'
-bin/magento config:set -- carriers/shipper/password '0:3:Y7PvwaEfgNvtDjP7isFNbXjrk9VtA83RmYmg4ecnKH3mInXy1bmdQKq6GgOfnwR9RZ3KLGLfZxdkjpLUK3aFQAiQhS04F8obDALFHF7C'
+bin/magento config:set -- carriers/shipper/api_key '0:3:ZZevgu1wOSHaFBjeaR4phqudljTcfCZ+9eOQy9lbS4Woy1Toe7dOQnIaltvJH894l+V+GEJpUW5YWOqB'
+bin/magento config:set -- carriers/shipper/password '0:3:LpC/sYtBuTfTVTER/ZfwFQnGYf+F3VxeniaD1o7f81oX2k41MY0K0O1/fQcC0R33AjLpOUaSpUXGGgcX2sfo+4dszKShQ6p1DZxte/Hj'
 
 
 # Change title of click and collect
