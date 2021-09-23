@@ -18,6 +18,8 @@ INSTANCEID="$(echo $m2db_host | cut -d'-' -f1)"
 echo ${INSTANCEID}
 #bin/magento config:set smile_elasticsuite_core_base_settings/es_client/servers ${INSTANCEID}-elastic-search
 bin/magento config:set --lock-config catalog/search/elasticsearch7_server_hostname ${INSTANCEID}-elastic-search
+bin/magento config:set catalog/search/engine elasticsearch7
+
 
 bin/magento config:set twofactorauth/general/enable 0
 
