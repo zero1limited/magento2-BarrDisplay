@@ -345,6 +345,7 @@ return [
         'Wyomind_Framework' => 1,
         'Wyomind_ElasticsearchCore' => 1,
         'Wyomind_QuickOrder' => 1,
+        'Wyomind_SimpleGoogleShopping' => 1,
         'Yotpo_Yotpo' => 1,
         'Zero1_Csp' => 1,
         'Zero1_Patches' => 1,
